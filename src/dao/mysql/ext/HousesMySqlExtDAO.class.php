@@ -11,7 +11,7 @@ class HousesMySqlExtDAO extends HousesMySqlDAO{
 	 * Get all search records from table house
 	 */
 	public function getSearchResult( 'keywords' ){
-		$sql = " SELECT * FROM house WHERE description LIKE '%keywords%'";
+		$sql = " SELECT * FROM houses WHERE description OR address LIKE '% ? %'";
 		$sqlQuery = new SqlQuery($sql);
 		$sqlQuery -> set($keywords);
 		return $this->getList($sqlQuery);

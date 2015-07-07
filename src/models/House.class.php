@@ -2,7 +2,7 @@
 	/**
 	 * Object represents table 'houses'
 	 *
-     	 * @author: http://phpdao.com
+     	 * @author: rajnish
      	 * @date: 2015-07-08 01:14	 
 	 */
 	class House{
@@ -14,7 +14,7 @@
 		private $description;
 		private $type;
 
-		function __construct ($id, $name, $contact, $address, $description, $type) {
+		function __construct ($name, $contact, $address, $description, $type, $id = null) {
 			$this -> id = $id;
 			$this -> name = $name;
 			$this -> contact = $contact;
@@ -22,6 +22,53 @@
 			$this -> description = $description;
 			$this -> type = $type;
 		}
-		
+
+		function setId ( $id ) {
+			$this -> id = $id;
+		}
+
+		function getId ( ) {
+			return $this -> id;
+		}
+
+		function setName ( $name ) {
+			$this -> name = $name;
+		}
+
+		function getName ( ) {
+			return $this -> name;
+		}
+
+		function setContact ( $contact ) {
+			$this -> contact = $contact;
+		}
+
+		function getContact ( ) {
+			return $this -> contact;
+		}
+
+		function setAddress ( $address ) {
+			$this -> address = $address;
+		}
+
+		function get ( ) {
+			return $this -> address;
+		}
+
+		function setDescription ( $description ) {
+			$this -> description = $description;
+		}
+
+		function getDescription ( ) {
+			return $this -> description;
+		}
+
+		function setType ($type) {
+			$this -> type = $type;
+		}
+
+		function getType ( ) {
+			return $this -> type;
+		}
 	}
 ?>

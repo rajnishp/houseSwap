@@ -178,15 +178,9 @@ class HousesMySqlDAO implements HousesDAO{
 	 * @return HousesMySql 
 	 */
 	protected function readRow($row){
-		$house = new House();
 		
-		$house->id = $row['id'];
-		$house->name = $row['name'];
-		$house->contact = $row['contact'];
-		$house->address = $row['address'];
-		$house->description = $row['description'];
-		$house->type = $row['type'];
-
+		$house = new House($row['name'], $row['contact'], $row['address'], $row['description'], $row['type'], $row['id']);
+		
 		return $house;
 	}
 	
