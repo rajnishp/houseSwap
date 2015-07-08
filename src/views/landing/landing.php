@@ -1,4 +1,4 @@
-<?php require_once '../source/sharepage.php'; ?>
+<?php require_once 'views/source/sharepage.php'; ?>
 
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <?php require_once '../header/header.php'; ?>
+  <?php require_once 'views/header/header.php'; ?>
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
   <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -28,9 +28,9 @@
 
 <div id="wrapper">
 
-  <?php require_once '../navbar/navbar.php'; ?>
+  <?php require_once 'views/navbar/navbar.php'; ?>
 
-
+    <?php foreach ($houses as $key => $value) { ?>
     <div class="row">
       <div class="col-md-8 col-md-offset-1">
         <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><div style="overflow:hidden;height:300px;"><div id="gmap_canvas" style="height:300px;"></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style><a class="google-map-code" href="http://wordpress-themes.org" id="get-map-data">best themes</a></div><script type="text/javascript"> function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(40.805478,-73.96522499999998),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(40.805478, -73.96522499999998)});infowindow = new google.maps.InfoWindow({content:"<b>The Breslin</b><br/>2880 Broadway<br/> New York" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
@@ -38,54 +38,25 @@
       
       <div class="col-md-2">
 
-        <p> 1 BHk available  and want to shift to belandur </p>
+        <p> <?= $value->getDescription() ?> </p>
         <hr>
-        <p> Rajnish Kumar </p>
+        <p> <?= $value->getAddress() ?> </p>
         <hr>
-        <p>8901414422 </p>
+        <p> <?= $value->getName() ?> </p>
+        <hr>
+        <p><?= $value->getContact() ?> </p>
 
         <?php sharepage('http://HouseSwap.in', '1');
           ?>
       </div>
     </div>
     <hr>
-    <div class="row">
-      <div class="col-md-8 col-md-offset-1">
-        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><div style="overflow:hidden;height:300px;"><div id="gmap_canvas1" style="height:300px;"></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style><a class="google-map-code" href="http://wordpress-themes.org" id="get-map-data">best themes</a></div><script type="text/javascript"> function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(40.805478,-73.96522499999998),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas1"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(40.805478, -73.96522499999998)});infowindow = new google.maps.InfoWindow({content:"<b>The Breslin</b><br/>2880 Broadway<br/> New York" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
-      </div>
-      
-      <div class="col-md-2">
-
-        <p> 1 BHk available  and want to shift to belandur </p>
-        <hr>
-        <p> Rajnish Kumar </p>
-        <hr>
-        <p>8901414422 </p>
-      </div>
-
-    </div>
-    <hr>
-    <div class="row">
-      <div class="col-md-8 col-md-offset-1">
-        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script><div style="overflow:hidden;height:300px;"><div id="gmap_canvas2" style="height:300px;"></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style><a class="google-map-code" href="http://wordpress-themes.org" id="get-map-data">best themes</a></div><script type="text/javascript"> function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(40.805478,-73.96522499999998),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById("gmap_canvas2"), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(40.805478, -73.96522499999998)});infowindow = new google.maps.InfoWindow({content:"<b>The Breslin</b><br/>2880 Broadway<br/> New York" });google.maps.event.addListener(marker, "click", function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
-      </div>
-      
-      <div class="col-md-2">
-
-        <p> 1 BHk available  and want to shift to belandur </p>
-        <hr>
-        <p> Rajnish Kumar </p>
-        <hr>
-        <p>8901414422 </p>
-      </div>
-
-    </div>
-    <hr>
+    <?php } ?>
 
 </div> <!-- /#wrapper -->
 
 
-  <?php require_once '../footer/footer.php'; ?>
+  <?php require_once 'views/footer/footer.php'; ?>
 
 
 </body>

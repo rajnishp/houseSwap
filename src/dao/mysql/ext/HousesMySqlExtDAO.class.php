@@ -16,6 +16,13 @@ class HousesMySqlExtDAO extends HousesMySqlDAO{
 		//$sqlQuery -> set($keywords);
 		return $this->getList($sqlQuery);
 	}
+
+	public function loadLastTen(){
+		$sql = 'SELECT * FROM houses order by id desc LIMIT 0, 10; ';
+		$sqlQuery = new SqlQuery($sql);
+		
+		return $this->getList($sqlQuery);
+	}
 	
 }
 ?>

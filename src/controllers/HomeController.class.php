@@ -21,8 +21,10 @@ class HomeController {
 		$baseUrl = $configs["COLLAP_BASE_URL"];
 		try{
 			//$topProjects = $this -> projectDAO -> getTopProjects(); // have not found the function find and replace
-			require_once 'views/searchTest.php';
-			echo "hello";
+			$houses = $this->houseDAO->loadLastTen();
+			var_dump($houses);
+			require_once 'views/landing/landing.php';
+			
 
 		} catch (Exception $e) {
 
@@ -42,8 +44,8 @@ class HomeController {
 
 		try{
 			//$topProjects = $this -> projectDAO -> getTopProjects(); // have not found the function find and replace
-			require_once 'views/searchTest.php';
-			echo "hello";
+			require_once 'views/landing/landing.php';
+			
 
 		} catch (Exception $e) {
 

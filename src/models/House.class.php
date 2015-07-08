@@ -51,7 +51,7 @@
 			$this -> address = $address;
 		}
 
-		function get ( ) {
+		function getAddress ( ) {
 			return $this -> address;
 		}
 
