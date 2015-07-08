@@ -48,7 +48,7 @@
 
       <div class="navbar-header">
         <a href="./" class="navbar-brand navbar-brand-img">
-          <img src="./img/logo.png" alt="MVP Ready">
+          <img src="../../static/img/logo.png" alt="MVP Ready">
         </a>
         
         <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-collapse">
@@ -57,11 +57,17 @@
         </button>
       </div> <!-- /.navbar-header -->
 
-
       <nav class="collapse navbar-collapse" role="navigation">
-
+      
+      <ul class="nav navbar-nav mainnav-menu">
+        <form class="mainnav-form" role="search">
+          <input type="text" class="form-control input-md mainnav-search-query" placeholder="Search">
+          <button class="btn btn-sm mainnav-form-btn"><i class="fa fa-search"></i></button>
+        </form>
+      </ul>
+        
         <ul class="nav navbar-nav navbar-right mainnav-menu">
-
+          
           <li class="dropdown ">
             <a href="#">
               FAQ
@@ -139,111 +145,6 @@
         </div> <!-- /.masthead-carousel -->
 
     </div> <!-- /.masthead -->
-
-
-
-    <div class="content">
-
-      <section id="section-features" class="home-section">
-
-        <div class="container">
-
-          <div class="heading-block heading-minimal heading-center">
-            <h1>
-              Why Choose MVP Ready?
-            </h1>
-          </div> <!-- /.heading-block -->
-
-          
-
-
-          <div class="feature-lg">
-
-            <div class="row">
-              
-              <div class="col-sm-6">
-                <hr class="spacer-sm">
-                <figure class="feature-figure"><img src="./img/features/product01.png" class="img-responsive" alt=""></figure>
-              </div><!-- /.col -->
-              
-              <div class="col-sm-6">
-                <div class="feature-content">
-                  <h5>Consent accullignis dentibea.</h5>
-                  <h3>Fully flexible user interface</h3>
-                  <p>Magnis modipsae que lib voloratati andigen daepeditem quiate ut reporemni aut labor. Laceaque quiae sitiorem rest non restibusaes es tumquam core posae volor remped.</p>
-                  <ul class="icons-list">
-                    <li>
-                      <i class="icon-li fa fa-check text-primary"></i>
-                      Voloratati andigen daepeditem quiate
-                    </li>
-                    <li>
-                      <i class="icon-li fa fa-check text-primary"></i>
-                      Laceaque quiae sitiorem
-                    </li>
-                    <li>
-                      <i class="icon-li fa fa-check text-primary"></i>
-                      Tumquam core posae
-                    </li>
-                  </ul>
-                  <a href="#" class="btn btn-default">Check out the functions</a>
-                </div> <!-- /.feature-content -->
-              </div><!-- /.col -->
-              
-            </div> <!-- /.row -->
-
-          </div> <!-- /.feature-lg -->
-
-
-          <hr class="spacer-lg">
-
-
-          <div class="feature-lg figure-right">
-
-            <div class="row">
-              
-              <div class="col-sm-6 col-sm-push-6 ">
-                <hr class="spacer-sm">
-                <figure class="feature-figure"><img src="./img/features/product02.jpg" class="img-responsive" alt=""></figure>
-              </div><!-- /.col -->
-              
-              <div class="col-sm-6 col-sm-pull-6">
-                <div class="feature-content">
-                  <h5>Incim resto explabo.</h5>
-                  <h3>Over 14,000 designs available</h3>
-                  <p>Magnis modipsae que lib voloratati andigen daepeditem quiate es reporemus aut labor. Laceaque quiae sitiorem rest non restibusaes dem tumquam core posae volor remped modis volor. Doloreiur quia commolu ptatemp dolupta oreprerum tibusam eumenis et consent accullignis lib dentibea autem inisita.</p>
-                  <ul class="icons-list">
-                    <li>
-                      <i class="icon-li fa fa-check text-primary"></i>
-                      Tumquam core posae volor remped modis volor
-                    </li>
-                    <li>
-                      <i class="icon-li fa fa-check text-primary"></i>
-                      Non restibusaes dem tumquam
-                    </li>
-                    <li>
-                      <i class="icon-li fa fa-check text-primary"></i>
-                      Modipsae que lib voloratati andigen daepeditem
-                    </li>
-                  </ul>
-                  <a href="#" class="btn btn-default">Visit the showroom</a>
-                </div> <!-- /.feature-content -->
-              </div><!-- /.col -->
-              
-            </div> <!-- /.row -->
-
-          </div> <!-- /.feature-lg -->
-
-
-          <hr class="spacer-lg">
-
-
-          
-
-          </div> <!-- /.container -->
-
-        </section>
-
-    </div> <!-- /.content -->
 
 
 </div> <!-- /#wrapper -->
@@ -363,7 +264,7 @@
     <div class="row">
 
       <div class="col-sm-12">
-        <p>Copyright &copy; 2013-15 <a href="javascript:;">Jumpstart Themes</a>.</p>
+        <p>Copyright &copy; 2015 <a href="javascript:;">HouseSwap</a>.</p>
       </div> <!-- /.col -->
 
     </div> <!-- /.row -->
