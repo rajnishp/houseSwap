@@ -1,5 +1,6 @@
 <?php
-include_once "controllers/HousesController.class.php";
+include_once "controllers/HouseController.class.php";
+include_once "controllers/HomeController.class.php";
 
 
 require_once 'utils/Util.php';
@@ -10,7 +11,7 @@ require_once 'cache/AppCacheRegistry.class.php';
 
 /* Setting up the app-configurations globally for use across classes */
 global $configs;
-$configs = json_decode (file_get_contents('collap-configs.json'), true);
+$configs = json_decode (file_get_contents('house-swap-configs.json'), true);
 
 /* Setting up the logger globally for use across classes */
 global $logger;
@@ -32,16 +33,10 @@ if ( ! isset($_SESSION['user_id']) && count($route) <= 1  ){
 		
 		//single page app
 		switch ($page) {
-			case "houses":
+			case "house":
 										
-					$housesController = new HousesController();
-					$HousesController -> render($route[2]);
-				break;
-
-			case "search":
-
-					$searchController = new SearchController($route[2]);
-					$searchController -> render();
+					$houseController = new HouseController();
+					$houseController -> render($route[2]);
 				break;
 
 			default:
