@@ -18,11 +18,11 @@ class DAOFactory{
 	 * @return HousesDAO
 	 */
 	public static function getHousesDAO(){
-		require_once('HouseDAO.class.php');
+		require_once('HousesDAO.class.php');
 		require_once('models/House.class.php');
-		require_once('mysql/HouseMySqlDAO.class.php');
-		require_once('mysql/ext/HouseMySqlExtDAO.class.php');
-		
+		require_once('mysql/HousesMySqlDAO.class.php');
+		require_once('mysql/ext/HousesMySqlExtDAO.class.php');
+
 		return new HousesMySqlExtDAO();
 	}
 
