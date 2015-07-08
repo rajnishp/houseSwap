@@ -3,7 +3,7 @@
         "host": "localhost", 
         "user": "root", 
         "password": "redhat11111p", 
-        "database": "ninjasTeamRoom2" 
+        "database": "houseSwap" 
         }, 
     "mongo": {    
         "server": "127.0.0.1", 

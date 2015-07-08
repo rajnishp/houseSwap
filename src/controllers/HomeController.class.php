@@ -21,7 +21,7 @@ class HomeController {
 		$baseUrl = $configs["COLLAP_BASE_URL"];
 		try{
 			//$topProjects = $this -> projectDAO -> getTopProjects(); // have not found the function find and replace
-			//require_once 'views/landing/index.php';
+			require_once 'views/searchTest.php';
 			echo "hello";
 
 		} catch (Exception $e) {
@@ -31,10 +31,25 @@ class HomeController {
 
 	}
 
-	function processForm($keywords){
+	function processForm(){
+		echo "search Restuls";
+		
+		$houses = $this->houseDAO->getSearchResult( $_GET["search"] );
+		if(count($houses) == 0)
+			echo "sorry, Now House";
+		else
+			var_dump($houses);
 
+		try{
+			//$topProjects = $this -> projectDAO -> getTopProjects(); // have not found the function find and replace
+			require_once 'views/searchTest.php';
+			echo "hello";
 
-		$this->houseDAO->getSearchResult( $keywords );
+		} catch (Exception $e) {
+
+			echo "File missing at server";
+		}
+
 
 
 

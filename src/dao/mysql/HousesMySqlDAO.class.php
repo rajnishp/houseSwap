@@ -62,7 +62,7 @@ class HousesMySqlDAO implements HousesDAO{
 		
 		$sqlQuery->set($house->setName());
 		$sqlQuery->set($house->setContact());
-		$sqlQuery->set($house->setAddress();
+		$sqlQuery->set($house->setAddress());
 		$sqlQuery->set($house->setDescription());
 		$sqlQuery->setNumber($house->setType());
 
