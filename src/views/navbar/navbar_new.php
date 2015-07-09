@@ -13,7 +13,12 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav pull-right">
-            <li class="active"><a href="#contact">Contact</a></li>
+            <li >
+                <a href="#contact">Contact</a>
+            </li>
+            <li class="active">
+                <a href="#post_request">Post Request</a>
+            </li>
             
         </ul>
         <div class="col-sm-6 col-md-6 ">

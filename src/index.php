@@ -43,6 +43,11 @@ if ( ! isset($_SESSION['user_id']) && count($route) <= 1  ){
 					$homeController -> processForm ();	
 				break;
 
+			case "your_request":
+					$homeController = new HomeController();
+					$homeController -> postHouse ();	
+				break;
+
 			default:
 						//langing page of houseswap 
 					$homeController = new HomeController();

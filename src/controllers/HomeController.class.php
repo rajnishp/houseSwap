@@ -66,9 +66,9 @@ class HomeController {
 				$_POST['contact'], 
 				$_POST['address'], 
 				$_POST['description'], 
-				0, 
 				null);
 		
+		//var_dump($_POST); exit;
 		$this -> houseDAO ->insert($house);
 
 	}

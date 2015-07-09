@@ -37,7 +37,7 @@
 
       <div class="row">
         
-        <div class="col-md-8 col-md-offset-1">
+        <div class="col-md-7 col-lg-7 col-sm-10 col-sm-offset-1 ">
           <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
           <div style="overflow:hidden;height:300px;">
             <div id="gmap_canvas" style="height:300px;"></div>
@@ -57,29 +57,107 @@
           </script>
         </div>
         
-        <div class="col-md-2">
+        
+        <div class="col-md-3 col-lg-3 col-sm-10 col-sm-offset-1">
+        
 
-          <p> <?= $house->getDescription() ?> </p>
-          <hr>
-          <p> <?= $house->getAddress() ?> </p>
-          <hr>
-          <p> <?php
+          <ul class="icons-list">
+            
+            <li>
+              <i class="icon-li fa fa-bars"></i>
+              <?= $house->getDescription() ?>
+            </li>
+            <li>
+              <i class="icon-li fa fa-home"></i>
+              <?= $house->getAddress() ?>
+            </li>
+
+            <li>
+              <i class="icon-li fa fa-user"></i>
+              <?php
                 $name = explode(" ", $house->getName());
-                foreach ($name as $key => $value) {
-                  echo ucfirst($value)." ";
+                foreach ($name as $key => $valueName) {
+                  echo ucfirst($valueName)." ";
                 }
               ?>
-          </p>
-          <hr>
-          <p><?= $house->getContact() ?> </p>
-
-          <?php sharepage('http://HouseSwap.in');
-            ?>
+            </li>
+            <li>
+              <i class="icon-li fa fa-phone"></i>
+              <?= $house->getContact() ?>
+            </li>
+            <li>
+              <?php 
+                $houseId = $house->getId();
+                sharepage("http://HouseSwap.in/house/$houseId");
+              ?>
+            </li>
+            <!-- <li>
+              <i class="icon-li fa fa-map-marker"></i>
+              <a href="javascript:;">View Map</a>
+            </li> -->
+          </ul>
         </div>
       
       </div>
       
       <hr>
+
+      <!-- /.post request form -->
+      <section id = 'post_request'>
+
+        <div class="row">
+          <div class="portlet portlet-boxed portlet-danger">
+
+            <div class="portlet-header">
+              <h4 class="portlet-title">
+                <u><i class="fa fa-check portlet-icon"></i>Post your Request</u>
+              </h4>
+            </div> <!-- /.portlet-header -->
+
+            <div class="portlet-body">
+
+              <form id="" action="<?= $baseUrl ?>postHouse" method="post" class="form parsley-form">
+
+              <div class="col-md-5 col-lg-5 col-sm-12">
+                <div class="form-group">
+                  <label class="control-label" for="name">Name</label>
+                  <input type="text" id="name" name="name" class="form-control" data-parsley-required="true">
+                </div> <!-- /.form-group -->
+
+                <div class="form-group">
+                  <label class="control-label" for="contact">Contact Number</label>
+                  <input type="text" id="contact" name="contact" class="form-control" data-parsley-required="true">
+                </div> <!-- /.form-group -->
+
+                <div class="form-group">
+                  <label class="control-label" for="address">Address</label>
+                  <input type="text" id="address" name="address" class="form-control" data-parsley-required="true">
+                </div> <!-- /.form-group -->
+              
+              </div>
+
+              <div class="col-md-5 col-lg-5 col-sm-12">
+                <div class="form-group">
+                  <label class="control-label" for="description">Description/Details</label>
+                  <textarea type="text" id="description" name="description" class="form-control" data-parsley-required="true" style="height: 133px;"></textarea>
+                  </textarea>
+                </div> <!-- /.form-group -->
+
+                <div class="form-group pull-right">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div> <!-- /.form-group -->
+              </div>
+              </form>
+              
+            </div> <!-- /.portlet-body -->
+
+          </div> <!-- /.portlet -->
+        </div>
+      
+      </section>
+ 
+     <!-- /.post request form ends-->
+   
     
     </div> <!-- /#container -->
   
