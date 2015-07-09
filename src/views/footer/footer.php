@@ -1,3 +1,5 @@
+
+<section id="contact">
 <footer class="footer">
 
   <div class="container">
@@ -7,12 +9,10 @@
         <div class="col-sm-3">
 
           <div class="heading-block">
-            <h4>MVP Ready</h4>
+            <h4>HouseSwap</h4>
           </div> <!-- /.heading-block -->    
 
-          <p>Aliquam fringilla, sapien egetferas scelerisque placerat, lorem libero cursus lorem, sed sodales lorem libero eu sapien. Nunc mattis feugiat justo vel faucibus. Nulla consequat feugiat malesuada.</p>
-
-          <p>Placerat, lorem libero cursus lorem, sed sodales lorem libero eu sapien</p>
+          <p>House Swap is an easy way to relocate with exchange your house to your interested leads.</p>
         </div> <!-- /.col -->
 
 
@@ -25,23 +25,23 @@
           <ul class="icons-list">
             <li>
               <i class="icon-li fa fa-home"></i>
-              123 Northwest Way <br>
-              Las Vegas, NV 89183
+              HSR Layout <br>
+              Bangalore, India
             </li>
 
             <li>
               <i class="icon-li fa fa-phone"></i>
-              +1 702 123 4567
+              +91 - 8901414422
             </li>
 
             <li>
               <i class="icon-li fa fa-envelope"></i>
-              <a href="mailto:info@mvpready.com">info@mvpready.com</a>
+              <a href="mailto:pwnpnwr785@gmail.com">contact@houseswap.com</a>
             </li>
-            <li>
+            <!-- <li>
               <i class="icon-li fa fa-map-marker"></i>
               <a href="javascript:;">View Map</a>
-            </li>
+            </li> -->
           </ul>
         </div> <!-- /.col -->
 
@@ -62,11 +62,6 @@
             <li>
               <i class="icon-li fa fa-twitter"></i>
               <a href="javascript:;">Twitter</a>
-            </li>
-
-            <li>
-              <i class="icon-li fa fa-soundcloud"></i>
-              <a href="javascipt:;">Sound Cloud</a>
             </li>
 
             <li>
@@ -106,7 +101,7 @@
   </div> <!-- /.container -->
 
 </footer>
-
+</section>
 <footer class="copyright">
   <div class="container">
 

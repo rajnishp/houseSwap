@@ -18,7 +18,8 @@ class HomeController {
 	function render (){
 		// here its shower that user is not in session
 		global $configs; 
-		$baseUrl = $configs["COLLAP_BASE_URL"];
+	
+		$baseUrl = $configs["HOUSESWAP_BASE_URL"];
 		try{
 			//$topProjects = $this -> projectDAO -> getTopProjects(); // have not found the function find and replace
 			$houses = $this->houseDAO->loadLastTen();
