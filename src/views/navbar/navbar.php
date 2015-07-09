@@ -1,4 +1,4 @@
-<header class="navbar" role="banner">
+<header class="navbar navbar-fixed-top" role="banner" style="border-bottom-style: solid; border-bottom-width: 1px;">
 
     <div class="container">
 
@@ -14,13 +14,14 @@
       </div> <!-- /.navbar-header -->
 
       <nav class="collapse navbar-collapse" role="navigation">
-      
-      <ul class="nav navbar-nav mainnav-menu">
-        <form class="mainnav-form" role="search">
-          <input type="text" class="form-control input-md mainnav-search-query" placeholder="Search">
-          <button class="btn btn-sm mainnav-form-btn"><i class="fa fa-search"></i></button>
-        </form>
-      </ul>
+        
+          <div class="col-md-4 col-sm-4">  
+              <form class="" role="search" style="" >
+                <input type="text" class="form-control input-lg mainnav-search-query" placeholder="Search">
+                <button class="btn btn-sm mainnav-form-btn" style="margin-top: -16%; margin-left: 90%;"><i class="fa fa-search"></i></button>
+              </form>
+            </div>
+          
         
         <ul class="nav navbar-nav navbar-right mainnav-menu">
           

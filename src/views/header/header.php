@@ -18,4 +18,7 @@
 
     <!-- sharepage  CSS -->
   <link rel="stylesheet" href="../../static/css/sharepage.css">
+ 
+  <!--CSS -->
+  <link rel="stylesheet" href="../../static/css/nifty.min.css">
 
