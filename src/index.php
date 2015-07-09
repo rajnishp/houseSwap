@@ -20,7 +20,7 @@ $logger -> enabled = true;
 $logger -> debug ("Setting up ...");
 
 $route = explode("/",$_SERVER[REQUEST_URI]);
-var_dump($route);
+//var_dump($route);
 
 if ( ! isset($_SESSION['user_id']) && count($route) <= 1  ){
 	//langing page of collap

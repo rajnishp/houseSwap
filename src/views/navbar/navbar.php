@@ -16,11 +16,11 @@
       <nav class="collapse navbar-collapse" role="navigation">
         
           <div class="col-md-4 col-sm-4" style="margin-top: 23px;">  
-              <form class="" role="search" >
-                <input type="text" class="form-control input-lg mainnav-search-query" placeholder="Search">
-                <button class="btn btn-sm mainnav-form-btn" style="margin-top: -17%; margin-left: 88%;"><i class="fa fa-search"></i></button>
-              </form>
-            </div>
+            <form action="search" method="get" class="" role="search"  >
+              <input name="search" type="text" class="form-control input-lg mainnav-search-query" placeholder="Search">
+              <button type="submit" value="Submit" class="btn btn-sm mainnav-form-btn" style="margin-top: -17%; margin-left: 88%;"><i class="fa fa-search"></i></button>
+            </form>
+          </div>
           
         
         <ul class="nav navbar-nav navbar-right mainnav-menu" style="margin-top: 23px;">

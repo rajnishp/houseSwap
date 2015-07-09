@@ -20,10 +20,11 @@ class HomeController {
 		global $configs; 
 	
 		$baseUrl = $configs["HOUSESWAP_BASE_URL"];
+		//echo $baseUrl;
 		try{
 			//$topProjects = $this -> projectDAO -> getTopProjects(); // have not found the function find and replace
 			$houses = $this->houseDAO->loadLastTen();
-			var_dump($houses);
+			//var_dump($houses);
 			require_once 'views/landing/landing.php';
 			
 
@@ -35,13 +36,13 @@ class HomeController {
 	}
 
 	function processForm(){
-		echo "search Restuls";
+		//echo "search Restuls";
 		
 		$houses = $this->houseDAO->getSearchResult( $_GET["search"] );
 		if(count($houses) == 0)
 			echo "sorry, Now House";
 		else
-			var_dump($houses);
+			//var_dump($houses);
 
 		try{
 			//$topProjects = $this -> projectDAO -> getTopProjects(); // have not found the function find and replace

@@ -3,22 +3,30 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald:400,300,700">
 
   <!-- Font Awesome CSS -->
-  <link rel="stylesheet" href="../../static/bower_components/fontawesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="<?= $baseUrl ?>static/bower_components/fontawesome/css/font-awesome.min.css">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="../../static/bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="<?= $baseUrl ?>static/bower_components/bootstrap/dist/css/bootstrap.min.css">
 
 
 
     <!-- App CSS -->
-  <link rel="stylesheet" href="../../static/css/mvpready-landing.css">
-  <link href="../../static/bower_components/animate.css/animate.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="<?= $baseUrl ?>static/css/mvpready-landing.css">
+  <link href="<?= $baseUrl ?>static/bower_components/animate.css/animate.min.css" rel="stylesheet">
   <!-- <link rel="stylesheet" href="./css/custom.css"> -->
  
 
     <!-- sharepage  CSS -->
-  <link rel="stylesheet" href="../../static/css/sharepage.css">
+  <link rel="stylesheet" href="<?= $baseUrl ?>static/css/sharepage.css">
  
   <!--CSS -->
-  <link rel="stylesheet" href="../../static/css/nifty.min.css">
+  <link rel="stylesheet" href="<?= $baseUrl ?>static/css/nifty.min.css">
+
+    
+
+
+<!-- css for search navbar -->
+    <link rel="stylesheet" type="text/css" href="<?= $baseUrl ?>static/css/bootstrap.min.css" />
+
+
 

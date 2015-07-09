@@ -1,4 +1,4 @@
-<?php require_once '../source/sharepage.php'; ?>
+<?php require_once 'views/source/sharepage.php'; ?>
 
 
 <!DOCTYPE html>
@@ -14,7 +14,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <?php require_once '<?= $baseUrl ?>static/header/header.php'; ?>
+  <?php require_once 'views/header/header.php'; ?>
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -29,13 +29,13 @@
 
 <div id="wrapper">
 
-  <?php require_once '../navbar/navbar.php'; ?>
+  <?php require_once 'views/navbar/navbar_new.php'; ?>
 
   <div class="content">
 
     <div class="container">
 
-      <div class="row" style ="margin-top: 50px;">
+      <div class="row">
         
         <div class="col-md-8 col-md-offset-1">
           <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
@@ -59,11 +59,19 @@
         
         <div class="col-md-2">
 
-          <p> 1 BHk available  and want to shift to belandur </p>
+          <p> <?= $house->getDescription() ?> </p>
           <hr>
-          <p> Rajnish Kumar </p>
+          <p> <?= $house->getAddress() ?> </p>
           <hr>
-          <p>8901414422 </p>
+          <p> <?php
+                $name = explode(" ", $house->getName());
+                foreach ($name as $key => $value) {
+                  echo ucfirst($value)." ";
+                }
+              ?>
+          </p>
+          <hr>
+          <p><?= $house->getContact() ?> </p>
 
           <?php sharepage('http://HouseSwap.in');
             ?>
@@ -79,7 +87,7 @@
 
 </div> <!-- /#wrapper -->
 
-  <?php require_once '../footer/footer.php'; ?>
+  <?php require_once 'views/footer/footer.php'; ?>
 
 
 </body>

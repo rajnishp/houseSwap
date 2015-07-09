@@ -120,8 +120,8 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Core JS -->
-<script src="../../static/bower_components/jquery/dist/jquery.js"></script>
-<script src="../../static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="<?= $baseUrl ?>static/bower_components/jquery/dist/jquery.js"></script>
+<script src="<?= $baseUrl ?>static/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
-<script src="../../static/js/mvpready-landing.js"></script>
+<script src="<?= $baseUrl ?>static/js/mvpready-landing.js"></script>
 
