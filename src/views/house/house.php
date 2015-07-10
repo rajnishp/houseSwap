@@ -27,7 +27,7 @@
   <meta property="fb:app_id" content="302184056577324" /> 
   <meta property="og:type"   content="website" /> 
   <meta property="og:author" content="<?= ucfirst($house->getName()) ?>" />
-  <meta property="og:url"    content="http://www.houseswap.in/" /> 
+  <meta property="og:url"    content="http://www.houseswap.in/<?= $house->getId() ?>" /> 
   <meta property="og:title"  content="House Swap | Exchange your House" /> 
   <meta property="og:description"  content="<?= $house->getDescription() ?>" />
   <meta property="og:image"  content="" /> 
@@ -36,7 +36,7 @@
     <meta name="twitter:card" content="photo" />
     <meta name="twitter:site" content="@goHouseswap">
     <meta name="twitter:creator" content="@goHouseSwap">
-    <meta name="twitter:url" content="<?= "http://houseswap.in"?>" />
+    <meta name="twitter:url" content="http://houseswap.in/<?= $house->getId() ?>" />
     <meta name="twitter:title" content="Swap house available at <?= $house->getAddress() ?>" />
     <meta name="twitter:description" content="<?= $house->getDescription() ?>" />
     <meta name="twitter:image" content="" />
