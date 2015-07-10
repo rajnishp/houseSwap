@@ -65,7 +65,9 @@ class HomeController {
 				$_POST['name'], 
 				$_POST['contact'], 
 				$_POST['address'], 
-				$_POST['description'], 
+				$_POST['description'],
+				$_POST['from'],
+				0,
 				null);
 		
 		//var_dump($_POST); exit;

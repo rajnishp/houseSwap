@@ -29,9 +29,9 @@
   <!-- for Twitter -->          
     <meta name="twitter:card" content="photo" />
     <meta name="twitter:site" content="@houseswap">
-    <meta name="twitter:creator" content="<?= "@".$obj->first_name.$obj->last_name; ?>">
+    <meta name="twitter:creator" content="">
     <meta name="twitter:url" content="<?= "http://houseswap.in"?>" />
-    <meta name="twitter:title" content="" />
+    <meta name="twitter:title" content="House Swap | Exchange your House" />
     <meta name="twitter:description" content="" />
     <meta name="twitter:image" content="" />
 
@@ -149,6 +149,11 @@
                 <div class="form-group">
                   <label class="control-label" for="address">Address</label>
                   <input type="text" id="address" name="address" class="form-control" data-parsley-required="true">
+                </div> <!-- /.form-group -->
+
+                <div class="form-group">
+                  <label class="control-label" for="address">Available</label>
+                  <input type="date" id="available" name="available" class="form-control" data-parsley-required="true">
                 </div> <!-- /.form-group -->
               
               </div>

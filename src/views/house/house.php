@@ -17,7 +17,7 @@
 
   <!-- for Google -->
     <meta name="description" content="<?= $house->getDescription() ?>" />
-    <meta name="keywords" content="Housing, Renting, Exchange Home, " />
+    <meta name="keywords" content="Housing, Renting, Exchange Home" />
     <meta name="author" content="<?= ucfirst($house->getName()) ?>" />
     <meta name="copyright" content="true" />
     <meta name="application-name" content="website" />
@@ -27,8 +27,9 @@
   <meta property="fb:app_id" content="302184056577324" /> 
   <meta property="og:type"   content="website" /> 
   <meta property="og:author" content="<?= ucfirst($house->getName()) ?>" />
-  <meta property="og:url"    content="http://www.houseswap.in" /> 
+  <meta property="og:url"    content="http://www.houseswap.in/" /> 
   <meta property="og:title"  content="House Swap | Exchange your House" /> 
+  <meta property="og:description"  content="<?= $house->getDescription() ?>" />
   <meta property="og:image"  content="" /> 
 
   <!-- for Twitter -->          
@@ -160,6 +161,11 @@
                   <label class="control-label" for="address">Address</label>
                   <input type="text" id="address" name="address" class="form-control" data-parsley-required="true">
                 </div> <!-- /.form-group -->
+
+                <div class="form-group">
+                  <label class="control-label" for="address">Available</label>
+                  <input type="date" id="available" name="available" class="form-control" data-parsley-required="true">
+                </div> <!-- /.form-group -->
               
               </div>
 
@@ -169,6 +175,7 @@
                   <textarea type="text" id="description" name="description" class="form-control" data-parsley-required="true" style="height: 133px;"></textarea>
                   </textarea>
                 </div> <!-- /.form-group -->
+
 
                 <div class="form-group pull-right">
                   <button type="submit" class="btn btn-primary">Submit</button>

@@ -12,14 +12,16 @@
 		private $contact;
 		private $address;
 		private $description;
+		private $from;
 		private $type;
 
-		function __construct ($name, $contact, $address, $description, $type, $id = null) {
+		function __construct ($name, $contact, $address, $description, $from, $type, $id = null) {
 			$this -> id = $id;
 			$this -> name = $name;
 			$this -> contact = $contact;
 			$this -> address = $address;
 			$this -> description = $description;
+			$this -> from = $from;
 			$this -> type = $type;
 		}
 
@@ -63,6 +65,14 @@
 			return $this -> description;
 		}
 
+		function setFrom ( $from ) {
+			$this -> from = $from;
+		}
+
+		function getFrom ( ) {
+			return $this -> from;
+		}
+		
 		function setType ($type) {
 			$this -> type = $type;
 		}

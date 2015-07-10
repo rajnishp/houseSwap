@@ -57,13 +57,14 @@ class HousesMySqlDAO implements HousesDAO{
  	 * @param HousesMySql house
  	 */
 	public function insert($house){
-		$sql = 'INSERT INTO houses (name, contact, address, description, type) VALUES (?, ?, ?, ?, ?)';
+		$sql = 'INSERT INTO houses (name, contact, address, description, `from`, type) VALUES (?, ?, ?, ?, ?, ?)';
 		$sqlQuery = new SqlQuery($sql);
 		
 		$sqlQuery->set($house->setName());
 		$sqlQuery->set($house->setContact());
 		$sqlQuery->set($house->setAddress());
 		$sqlQuery->set($house->setDescription());
+		$sqlQuery->set($house->setFrom());
 		$sqlQuery->setNumber($house->setType());
 
 		$id = $this->executeInsert($sqlQuery);	
@@ -77,13 +78,14 @@ class HousesMySqlDAO implements HousesDAO{
  	 * @param HousesMySql house
  	 */
 	public function update($house){
-		$sql = 'UPDATE houses SET name = ?, contact = ?, address = ?, description = ?, type = ? WHERE id = ?';
+		$sql = 'UPDATE houses SET name = ?, contact = ?, address = ?, description = ?, `from` = ?, type = ? WHERE id = ?';
 		$sqlQuery = new SqlQuery($sql);
 		
 		$sqlQuery->set($house->name);
 		$sqlQuery->set($house->contact);
 		$sqlQuery->set($house->address);
 		$sqlQuery->set($house->description);
+		$sqlQuery->set($house->from);
 		$sqlQuery->setNumber($house->type);
 
 		$sqlQuery->setNumber($house->id);
@@ -179,7 +181,7 @@ class HousesMySqlDAO implements HousesDAO{
 	 */
 	protected function readRow($row){
 		
-		$house = new House($row['name'], $row['contact'], $row['address'], $row['description'], $row['type'], $row['id']);
+		$house = new House($row['name'], $row['contact'], $row['address'], $row['description'], $row['from'], $row['type'], $row['id']);
 		
 		return $house;
 	}
