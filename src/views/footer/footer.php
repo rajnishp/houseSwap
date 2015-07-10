@@ -125,3 +125,8 @@
 
 <script src="<?= $baseUrl ?>static/js/mvpready-landing.js"></script>
 
+
+<!-- Plugin JS -->
+<script src="<?= $baseUrl ?>static/bower_components/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+
+
