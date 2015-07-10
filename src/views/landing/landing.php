@@ -104,6 +104,10 @@
               <?= $value->getContact() ?>
             </li>
             <li>
+              <i class="icon-li fa fa-level-up"></i>
+              <?= date("F jS, Y",strtotime($value->getFrom())); ?>
+            </li>
+            <li>
               <?php 
                 $houseId = $value->getId();
                 sharepage("http://HouseSwap.in/house/$houseId");

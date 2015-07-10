@@ -114,6 +114,10 @@
               <?= $house->getContact() ?>
             </li>
             <li>
+              <i class="icon-li fa fa-level-up"></i>
+              <?= $house->getFrom() ?>
+            </li>
+            <li>
               <?php 
                 $houseId = $house->getId();
                 sharepage("http://HouseSwap.in/house/$houseId");
