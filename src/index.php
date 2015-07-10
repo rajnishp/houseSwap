@@ -43,7 +43,7 @@ if ( ! isset($_SESSION['user_id']) && count($route) <= 1  ){
 					$homeController -> processForm ();	
 				break;
 
-			case "your_request":
+			case "postHouse":
 					$homeController = new HomeController();
 					$homeController -> postHouse ();	
 				break;

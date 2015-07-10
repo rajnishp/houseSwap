@@ -60,12 +60,12 @@ class HousesMySqlDAO implements HousesDAO{
 		$sql = 'INSERT INTO houses (name, contact, address, description, `from`, type) VALUES (?, ?, ?, ?, ?, ?)';
 		$sqlQuery = new SqlQuery($sql);
 		
-		$sqlQuery->set($house->setName());
-		$sqlQuery->set($house->setContact());
-		$sqlQuery->set($house->setAddress());
-		$sqlQuery->set($house->setDescription());
-		$sqlQuery->set($house->setFrom());
-		$sqlQuery->setNumber($house->setType());
+		$sqlQuery->set($house->getName());
+		$sqlQuery->set($house->getContact());
+		$sqlQuery->set($house->getAddress());
+		$sqlQuery->set($house->getDescription());
+		$sqlQuery->set($house->getFrom());
+		$sqlQuery->setNumber($house->getType());
 
 		$id = $this->executeInsert($sqlQuery);	
 		$house-> getId ( $id );

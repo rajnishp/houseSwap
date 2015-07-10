@@ -70,9 +70,9 @@ class HomeController {
 				0,
 				null);
 		
-		//var_dump($_POST); exit;
+		
 		$this -> houseDAO ->insert($house);
-
+		$this->render ();
 	}
 
 
