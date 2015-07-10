@@ -14,6 +14,28 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
+  <!-- for Google -->
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="copyright" content="true" />
+    <meta name="application-name" content="website" />
+
+  <!-- for Facebook -->          
+    <meta property="og:title" content="" />
+    <meta name="og:author" content="" />
+    <meta property="og:type" content="website"/>
+
+  <!-- for Twitter -->          
+    <meta name="twitter:card" content="photo" />
+    <meta name="twitter:site" content="@houseswap">
+    <meta name="twitter:creator" content="<?= "@".$obj->first_name.$obj->last_name; ?>">
+    <meta name="twitter:url" content="<?= "http://houseswap.in"?>" />
+    <meta name="twitter:title" content="" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="" />
+
+
   <?php require_once 'views/header/header.php'; ?>
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
