@@ -61,17 +61,19 @@ class HomeController {
 
 	function postHouse(){
 		//insert($house)
-		$house = new House(
-				$_POST['name'], 
-				$_POST['contact'], 
-				$_POST['address'], 
-				$_POST['description'],
-				$_POST['from'],
-				0,
-				null);
-		
-		
-		$this -> houseDAO ->insert($house);
+		if(isset($_POST['name'], $_POST['contact'], $_POST['address'], $_POST['description'], $_POST['from'])){
+			$house = new House(
+					strip_tags ($_POST['name']), 
+					strip_tags ($_POST['contact']), 
+					strip_tags ($_POST['address']), 
+					strip_tags ($_POST['description']),
+					strip_tags ($_POST['from']),
+					0,
+					null);
+			
+			
+			$this -> houseDAO ->insert($house);
+		}
 		$this->render ();
 	}
 

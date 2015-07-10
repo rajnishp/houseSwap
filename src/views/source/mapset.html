@@ -1,0 +1,98 @@
+<html>
+<title>Google Maps API v3 Example - Four maps and event handling</title>
+<head>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false">
+</script>
+<script type="text/javascript">
+    var geocoder;
+    var geocoder1;
+    var map;
+    var map2;
+    function initialize(){
+    geocoder = new google.maps.Geocoder();
+    geocoder1 = new google.maps.Geocoder();
+    var latlng = new google.maps.LatLng(28.612900,77.229458);
+    var myOptions =
+    {
+        zoom: 18,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var myOptions2 =
+    {
+        zoom: 18,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.SATELLITE
+    };
+    var myOptions3 =
+    {
+        zoom: 18,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.TERRAIN
+    };
+    var myOptions4 =
+    {
+        zoom: 18,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    };
+    map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+    map2 = new google.maps.Map(document.getElementById("map_canvas_2"), myOptions2);
+    var map3 = new google.maps.Map(document.getElementById("map_canvas_3"), myOptions3);
+    var map4 = new google.maps.Map(document.getElementById("map_canvas_4"), myOptions4);
+    google.maps.event.addListener(map, "zoom_changed", function()
+    {
+        zoomLevel = map.getZoom();
+        map2.setZoom(zoomLevel);
+        map3.setZoom(zoomLevel);
+        map4.setZoom(zoomLevel);
+    })
+    google.maps.event.addListener(map, "drag", function()
+    {
+        centre = map.getCenter();
+        map2.setCenter(centre);
+        map3.setCenter(centre);
+        map4.setCenter(centre);
+    })
+}
+
+function codeAddress() {
+  var address = "hsr sector 2 pranjipalya bus stand";
+  geocoder.geocode( { 'address': address}, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      map.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+          map: map,
+          position: results[0].geometry.location
+      });
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+
+  geocoder1.geocode( { 'address': "bellandur"}, function(results, status) {
+    if (status == google.maps.GeocoderStatus.OK) {
+      map2.setCenter(results[0].geometry.location);
+      var marker = new google.maps.Marker({
+          map: map2,
+          position: results[0].geometry.location
+      });
+    } else {
+      alert('Geocode was not successful for the following reason: ' + status);
+    }
+  });
+}
+</script>
+</head>
+<body onload="initialize()">
+<div id="map_canvas" style="top: 5px; left: 30px; width:500px; height:500px; float: left"></div>
+<div id="map_canvas_2" style="top: 5px; left: 75px; width:200px; height:200px"></div>
+<div id="map_canvas_3" style="top: 55px; left: 30px; width:200px; height:200px; float: left"></div>
+<div id="map_canvas_4" style="top: 55px; left: 75px; width:200px; height:200px"></div>
+   <script type="text/javascript">
+    setTimeout(codeAddress, 6) 
+   
+    </script>
+ 
+</body>
+</html>

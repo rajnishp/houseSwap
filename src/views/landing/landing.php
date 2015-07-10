@@ -48,6 +48,7 @@
 
 <body class="">
 
+
 <div id="wrapper">
 
   <?php require_once 'views/navbar/navbar_new.php'; ?>
