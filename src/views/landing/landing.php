@@ -14,27 +14,33 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <!-- for Google -->
+<!-- for Google -->
     <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
+    <meta name="keywords" content="Housing, Renting, Exchange Home" />
     <meta name="copyright" content="true" />
+    <meta name="url" content="http://www.houseswap.in" />
     <meta name="application-name" content="website" />
+    <meta name="image" content="<?= $baseUrl ?>/static/img/logo.png" />
+    
 
-  <!-- for Facebook -->          
-    <meta property="og:title" content="" />
-    <meta name="og:author" content="" />
-    <meta property="og:type" content="website"/>
+  <!-- for Facebook -->
+  <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
+  <meta property="fb:app_id" content="302184056577324" /> 
+  <meta property="og:type"   content="website" /> 
+  <meta property="og:author" content="HouseSwap" />
+  <meta property="og:url"    content="http://www.houseswap.in" /> 
+  <meta property="og:title"  content="House Swap | Exchange your House" /> 
+  <meta property="og:description"  content="House Swap | Exchange your House" />
+  <meta property="og:image"  content="<?= $baseUrl ?>/static/img/logo.png" />
 
   <!-- for Twitter -->          
     <meta name="twitter:card" content="photo" />
-    <meta name="twitter:site" content="@houseswap">
-    <meta name="twitter:creator" content="">
-    <meta name="twitter:url" content="<?= "http://houseswap.in"?>" />
+    <meta name="twitter:site" content="@goHouseswap">
+    <meta name="twitter:creator" content="@goHouseSwap">
+    <meta name="twitter:url" content="http://houseswap.in" />
     <meta name="twitter:title" content="House Swap | Exchange your House" />
-    <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="" />
-
+    <meta name="twitter:description" content="House Swap | Exchange your House" />
+    <meta name="twitter:image" content="<?= $baseUrl ?>/static/img/logo.png" />
 
   <?php require_once 'views/header/header.php'; ?>
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->

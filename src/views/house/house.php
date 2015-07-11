@@ -20,26 +20,29 @@
     <meta name="keywords" content="Housing, Renting, Exchange Home" />
     <meta name="author" content="<?= ucfirst($house->getName()) ?>" />
     <meta name="copyright" content="true" />
+    <meta name="url" content="http://www.houseswap.in/house/<?= $house->getId() ?>" />
     <meta name="application-name" content="website" />
+    <meta name="image" content="<?= $baseUrl ?>/static/img/logo.png" />
+    
 
   <!-- for Facebook -->
   <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#">
   <meta property="fb:app_id" content="302184056577324" /> 
   <meta property="og:type"   content="website" /> 
   <meta property="og:author" content="<?= ucfirst($house->getName()) ?>" />
-  <meta property="og:url"    content="http://www.houseswap.in/<?= $house->getId() ?>" /> 
+  <meta property="og:url"    content="http://www.houseswap.in/house/<?= $house->getId() ?>" /> 
   <meta property="og:title"  content="House Swap | Exchange your House" /> 
   <meta property="og:description"  content="<?= $house->getDescription() ?>" />
-  <meta property="og:image"  content="" /> 
+  <meta property="og:image"  content="<?= $baseUrl ?>/static/img/logo.png" />
 
   <!-- for Twitter -->          
     <meta name="twitter:card" content="photo" />
     <meta name="twitter:site" content="@goHouseswap">
     <meta name="twitter:creator" content="@goHouseSwap">
-    <meta name="twitter:url" content="http://houseswap.in/<?= $house->getId() ?>" />
+    <meta name="twitter:url" content="http://houseswap.in/house/<?= $house->getId() ?>" />
     <meta name="twitter:title" content="Swap house available at <?= $house->getAddress() ?>" />
     <meta name="twitter:description" content="<?= $house->getDescription() ?>" />
-    <meta name="twitter:image" content="" />
+    <meta name="twitter:image" content="<?= $baseUrl ?>/static/img/logo.png" />
 
   
   <?php require_once 'views/header/header.php'; ?>

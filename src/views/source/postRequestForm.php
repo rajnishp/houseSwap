@@ -1,7 +1,7 @@
 <!-- /.post request form -->
       <section id = 'post_request'>
 
-        <div class="row">
+        <div class="row col-md-offset-1 col-lg-offset-1">
           <div class="portlet portlet-boxed portlet-danger">
 
             <div class="portlet-header">
